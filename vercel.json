@@ -5,10 +5,6 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "public/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -18,15 +14,10 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "/server.js"
     }
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "server.js": {
-      "maxDuration": 30
-    }
   }
 }
