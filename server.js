@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static('public')); // Serve frontend files
 
 // MongoDB Atlas connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://username:password@cluster.mongodb.net/machine_control?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://saymon_db_user:sS3hv6KsQL3mZOUr@cluster0.2v6cd3c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('✅ Connected to MongoDB Atlas'))
